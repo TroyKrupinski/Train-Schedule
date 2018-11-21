@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+    body{
+    background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/D8qa-2E/old-steam-engine-train-locomotive-nostalgic-historical-retro-vintage-technology-background_bjvrt9kb__F0006.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+  
+  }
+  .col-centered{
+    float: none;
+    margin: 0 auto;
+}
+</style>
+  <meta charset="UTF-8">
+  <title>Train Schedule</title>
+
+
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src = "script.js">
+ 
+</script>
+
+</head>
+<body>
+    <div class="jumbotron bg-dark col-lg-6 col-centered text-white">
+        <h1 class="text-center">Train Schedule 🚅</h1>
+        
+      </div>
+      <div class="row">
+            <div class="col-lg-8 col-centered">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency (min)</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody id = "sc">
+        
+         
+        </tbody>
+      </table>
+            </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-centered">
+          <div class="card card text-white bg-dark">
+            <div class="card-header">
+              Add Train
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group row">
+                  <label for="train-name">Train Name</label>
+                  <input class="form-control" id="train-name" type="text">
+                  
+                </div>
+                <div class="form-group row">
+                    <label for="dest-name">Destination</label>
+                    <input class="form-control" id="dest-name" type="text">
+                  </div>
+                <div class="form-group row">
+                  <label for="train-time">First Train Time (HHmm) - military time</label>
+                  <input class="form-control" id="train-time" type="number">
+                </div>
+                <div class="form-group row">
+                    <label for="freq">Frequency (min)</label>
+                    <input class="form-control" id="freq" type="number">
+                  </div>
+                <button class="btn btn-primary" id="submit-train" type="submit">Submit</button>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+</body>
+</html>
